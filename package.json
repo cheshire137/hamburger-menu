@@ -1,0 +1,37 @@
+{
+  "name": "hamburger-menu",
+  "productName": "Hamburger Menu",
+  "description": "A Chrome extension to replace the hamburger menu icon on various websites.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cheshire137/hamburger-menu.git"
+  },
+  "author": {
+    "name": "Sarah Vessels",
+    "email": "cheshire137@gmail.com",
+    "url": "http://3till7.net/"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run-script style",
+    "style": "node_modules/xo/cli.js extension/content.js"
+  },
+  "devDependencies": {
+    "xo": "^0.15.1"
+  },
+  "xo": {
+    "esnext": true,
+    "globals": [
+      "document"
+    ],
+    "space": true,
+    "rules": {
+      "space-before-function-paren": 0,
+      "quotes": [2, "single", {"avoidEscape": true}],
+      "dot-location": [2, "object"],
+      "babel/object-curly-spacing": [2, "always"],
+      "camelcase": [2, {"properties": "never"}],
+      "no-new": 0
+    }
+  }
+}

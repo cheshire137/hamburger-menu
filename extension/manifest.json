@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Hamburger Menu",
+  "short_name": "Hamburger Menu",
+  "description": "Replace the hamburger menu icon on various websites.",
+  "version": "0.0.1",
+  "permissions": [
+    "storage", "tabs", "http://*/*", "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["content.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_page": "options.html",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": ["hotdog.png", "options.html"]
+}
