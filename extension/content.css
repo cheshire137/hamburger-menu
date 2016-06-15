@@ -2,7 +2,8 @@
 .fa-reorder.hamburgled.deliciously-hamburgled:before,
 .fa-bars.hamburgled.deliciously-hamburgled:before,
 .octicon-three-bars.hamburgled.deliciously-hamburgled:before,
-.glyphicons-menu-hamburger.hamburgled.deliciously-hamburgled:before {
+.glyphicons-menu-hamburger.hamburgled.deliciously-hamburgled:before,
+.halflings-menu-hamburger.hamburgled.deliciously-hamburgled:before {
   content: "";
   background-image: url('chrome-extension://__MSG_@@extension_id__/hotdog.png');
   background-repeat: no-repeat;
@@ -13,6 +14,7 @@
   height: 100%;
 }
 
-.glyphicons-menu-hamburger.hamburgled.deliciously-hamburgled {
+.glyphicons-menu-hamburger.hamburgled.deliciously-hamburgled,
+.halflings-menu-hamburger.hamburgled.deliciously-hamburgled {
   font-size: 0 !important;
 }
