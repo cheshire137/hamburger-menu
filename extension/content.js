@@ -2,7 +2,7 @@
 const faIcons = document.querySelectorAll('.fa-bars, .fa-navicon, .fa-reorder');
 
 // Octicons
-const octicons = document.querySelectorAll('.octicon-three-bars');
+const octicons = document.querySelectorAll('.octicon-three-bars, .octicon-grabber');
 
 // Glyphicons
 const glyphicons = document.querySelectorAll('.glyphicons-menu-hamburger, .halflings-menu-hamburger, .glyphicon-menu-hamburger');

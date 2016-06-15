@@ -1,17 +1,35 @@
 .fa-navicon.hamburgled.deliciously-hamburgled:before,
 .fa-reorder.hamburgled.deliciously-hamburgled:before,
 .fa-bars.hamburgled.deliciously-hamburgled:before,
-.octicon-three-bars.hamburgled.deliciously-hamburgled:before,
+span.octicon-three-bars.hamburgled.deliciously-hamburgled:before,
+span.octicon-grabber.hamburgled.deliciously-hamburgled:before,
+i.octicon-three-bars.hamburgled.deliciously-hamburgled:before,
+i.octicon-grabber.hamburgled.deliciously-hamburgled:before,
 .glyphicons-menu-hamburger.hamburgled.deliciously-hamburgled:before,
 .glyphicon-menu-hamburger.hamburgled.deliciously-hamburgled:before,
 .halflings-menu-hamburger.hamburgled.deliciously-hamburgled:before,
-.material-icons.hamburgled.deliciously-hamburgled:before {
-  content: "";
+.material-icons.hamburgled.deliciously-hamburgled:before,
+svg.octicon-three-bars.hamburgled.deliciously-hamburgled,
+svg.octicon-grabber.hamburgled.deliciously-hamburgled {
   background-image: url('chrome-extension://__MSG_@@extension_id__/hotdog.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   display: block;
+}
+
+.fa-navicon.hamburgled.deliciously-hamburgled:before,
+.fa-reorder.hamburgled.deliciously-hamburgled:before,
+.fa-bars.hamburgled.deliciously-hamburgled:before,
+span.octicon-three-bars.hamburgled.deliciously-hamburgled:before,
+span.octicon-grabber.hamburgled.deliciously-hamburgled:before,
+i.octicon-three-bars.hamburgled.deliciously-hamburgled:before,
+i.octicon-grabber.hamburgled.deliciously-hamburgled:before,
+.glyphicons-menu-hamburger.hamburgled.deliciously-hamburgled:before,
+.glyphicon-menu-hamburger.hamburgled.deliciously-hamburgled:before,
+.halflings-menu-hamburger.hamburgled.deliciously-hamburgled:before,
+.material-icons.hamburgled.deliciously-hamburgled:before {
+  content: "";
   width: 100%;
   height: 100%;
 }
@@ -21,4 +39,9 @@
 .halflings-menu-hamburger.hamburgled.deliciously-hamburgled,
 .material-icons.hamburgled.deliciously-hamburgled {
   font-size: 0 !important;
+}
+
+svg.octicon-three-bars.hamburgled.deliciously-hamburgled path,
+svg.octicon-grabber.hamburgled.deliciously-hamburgled path {
+  display: none;
 }
