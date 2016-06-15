@@ -5,7 +5,7 @@ const faIcons = document.querySelectorAll('.fa-bars, .fa-navicon, .fa-reorder');
 const octicons = document.querySelectorAll('.octicon-three-bars');
 
 // Glyphicons
-const glyphicons = document.querySelectorAll('.glyphicons-menu-hamburger, .halflings-menu-hamburger');
+const glyphicons = document.querySelectorAll('.glyphicons-menu-hamburger, .halflings-menu-hamburger, .glyphicon-menu-hamburger');
 
 const allIcons = Array.from(faIcons).concat(Array.from(octicons)).
                        concat(Array.from(glyphicons));

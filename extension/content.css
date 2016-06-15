@@ -3,6 +3,7 @@
 .fa-bars.hamburgled.deliciously-hamburgled:before,
 .octicon-three-bars.hamburgled.deliciously-hamburgled:before,
 .glyphicons-menu-hamburger.hamburgled.deliciously-hamburgled:before,
+.glyphicon-menu-hamburger.hamburgled.deliciously-hamburgled:before,
 .halflings-menu-hamburger.hamburgled.deliciously-hamburgled:before {
   content: "";
   background-image: url('chrome-extension://__MSG_@@extension_id__/hotdog.png');
@@ -15,6 +16,7 @@
 }
 
 .glyphicons-menu-hamburger.hamburgled.deliciously-hamburgled,
+.glyphicon-menu-hamburger.hamburgled.deliciously-hamburgled,
 .halflings-menu-hamburger.hamburgled.deliciously-hamburgled {
   font-size: 0 !important;
 }
