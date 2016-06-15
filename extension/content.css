@@ -1,6 +1,7 @@
-.fa.fa-navicon.hamburgled:before,
-.fa.fa-reorder.hamburgled:before,
-.fa.fa-bars.hamburgled:before {
+.fa-navicon.hamburgled:before,
+.fa-reorder.hamburgled:before,
+.fa-bars.hamburgled:before,
+.octicon-three-bars.hamburgled:before {
   content: "";
   background-image: url('chrome-extension://__MSG_@@extension_id__/hotdog.png');
   background-repeat: no-repeat;
