@@ -83,4 +83,4 @@
                          concat(Array.from(foundIcons)).
                          concat(Array.from(elusiveIcons));
   allIcons.forEach(icon => setHamburgerWidth(icon));
-})()
+})();

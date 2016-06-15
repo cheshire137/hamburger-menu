@@ -22,7 +22,8 @@
   "xo": {
     "esnext": true,
     "globals": [
-      "document"
+      "document",
+      "window"
     ],
     "space": true,
     "rules": {
