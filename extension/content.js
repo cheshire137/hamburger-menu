@@ -20,6 +20,9 @@
   // Foundation
   const foundIcons = document.querySelectorAll('.fi-list');
 
+  // Elusive
+  const elusiveIcons = document.querySelectorAll('.el-lines');
+
   function removePadding(icon, width, height) {
     let style;
     try {
@@ -77,6 +80,7 @@
                          concat(Array.from(glyphicons)).
                          concat(materialIcons).
                          concat(Array.from(ionicons)).
-                         concat(Array.from(foundIcons));
+                         concat(Array.from(foundIcons)).
+                         concat(Array.from(elusiveIcons));
   allIcons.forEach(icon => setHamburgerWidth(icon));
 })()
