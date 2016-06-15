@@ -10,12 +10,15 @@ i.octicon-grabber.hamburgled.deliciously-hamburgled:before,
 .halflings-menu-hamburger.hamburgled.deliciously-hamburgled:before,
 .material-icons.hamburgled.deliciously-hamburgled:before,
 svg.octicon-three-bars.hamburgled.deliciously-hamburgled,
-svg.octicon-grabber.hamburgled.deliciously-hamburgled {
+svg.octicon-grabber.hamburgled.deliciously-hamburgled,
+.ion-navicon-round.hamburgled.deliciously-hamburgled:before,
+.ion-navicon.hamburgled.deliciously-hamburgled:before,
+.ion-drag.hamburgled.deliciously-hamburgled:before {
   background-image: url('chrome-extension://__MSG_@@extension_id__/hotdog.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  display: block;
+  display: inline-block;
 }
 
 .fa-navicon.hamburgled.deliciously-hamburgled:before,
@@ -28,7 +31,10 @@ i.octicon-grabber.hamburgled.deliciously-hamburgled:before,
 .glyphicons-menu-hamburger.hamburgled.deliciously-hamburgled:before,
 .glyphicon-menu-hamburger.hamburgled.deliciously-hamburgled:before,
 .halflings-menu-hamburger.hamburgled.deliciously-hamburgled:before,
-.material-icons.hamburgled.deliciously-hamburgled:before {
+.material-icons.hamburgled.deliciously-hamburgled:before,
+.ion-navicon-round.hamburgled.deliciously-hamburgled:before,
+.ion-navicon.hamburgled.deliciously-hamburgled:before,
+.ion-drag.hamburgled.deliciously-hamburgled:before {
   content: "";
   width: 100%;
   height: 100%;
