@@ -1,5 +1,7 @@
 # Hamburger Menu
 
+![Screenshot](https://raw.githubusercontent.com/cheshire137/hamburger-menu/master/promo-assets/440x280.png)
+
 ## How to Build
 
 1. `npm install`
