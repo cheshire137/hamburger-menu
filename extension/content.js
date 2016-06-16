@@ -73,6 +73,9 @@
     if (width <= 0 && height <= 0 && icon.parentNode) {
       height = icon.parentNode.clientHeight;
     }
+    if (width && width < 10) {
+      width = icon.parentNode.clientWidth;
+    }
     [width, height] = squareItUp(width, height);
     if (width > 0) {
       icon.style.width = `${width}px`;
