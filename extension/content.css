@@ -1,57 +1,98 @@
-.fa-navicon.hamburgled.deliciously-hamburgled:before,
-.fa-reorder.hamburgled.deliciously-hamburgled:before,
-.fa-bars.hamburgled.deliciously-hamburgled:before,
-span.octicon-three-bars.hamburgled.deliciously-hamburgled:before,
-span.octicon-grabber.hamburgled.deliciously-hamburgled:before,
-i.octicon-three-bars.hamburgled.deliciously-hamburgled:before,
-i.octicon-grabber.hamburgled.deliciously-hamburgled:before,
-.glyphicons-menu-hamburger.hamburgled.deliciously-hamburgled:before,
-.glyphicon-menu-hamburger.hamburgled.deliciously-hamburgled:before,
-.halflings-menu-hamburger.hamburgled.deliciously-hamburgled:before,
-.material-icons.hamburgled.deliciously-hamburgled:before,
-svg.octicon-three-bars.hamburgled.deliciously-hamburgled,
-svg.octicon-grabber.hamburgled.deliciously-hamburgled,
-.ion-navicon-round.hamburgled.deliciously-hamburgled:before,
-.ion-navicon.hamburgled.deliciously-hamburgled:before,
-.ion-drag.hamburgled.deliciously-hamburgled:before,
-.fi-list.hamburgled.deliciously-hamburgled:before,
-.el-lines.hamburgled.deliciously-hamburgled:before {
+.fa-navicon.hamburgled.hotdog:before,
+.fa-reorder.hamburgled.hotdog:before,
+.fa-bars.hamburgled.hotdog:before,
+span.octicon-three-bars.hamburgled.hotdog:before,
+span.octicon-grabber.hamburgled.hotdog:before,
+i.octicon-three-bars.hamburgled.hotdog:before,
+i.octicon-grabber.hamburgled.hotdog:before,
+.glyphicons-menu-hamburger.hamburgled.hotdog:before,
+.glyphicon-menu-hamburger.hamburgled.hotdog:before,
+.halflings-menu-hamburger.hamburgled.hotdog:before,
+.material-icons.hamburgled.hotdog:before,
+svg.octicon-three-bars.hamburgled.hotdog,
+svg.octicon-grabber.hamburgled.hotdog,
+.ion-navicon-round.hamburgled.hotdog:before,
+.ion-navicon.hamburgled.hotdog:before,
+.ion-drag.hamburgled.hotdog:before,
+.fi-list.hamburgled.hotdog:before,
+.el-lines.hamburgled.hotdog:before {
   background-image: url('chrome-extension://__MSG_@@extension_id__/hotdog.png');
+}
+
+.fa-navicon.hamburgled.hamburger:before,
+.fa-reorder.hamburgled.hamburger:before,
+.fa-bars.hamburgled.hamburger:before,
+span.octicon-three-bars.hamburgled.hamburger:before,
+span.octicon-grabber.hamburgled.hamburger:before,
+i.octicon-three-bars.hamburgled.hamburger:before,
+i.octicon-grabber.hamburgled.hamburger:before,
+.glyphicons-menu-hamburger.hamburgled.hamburger:before,
+.glyphicon-menu-hamburger.hamburgled.hamburger:before,
+.halflings-menu-hamburger.hamburgled.hamburger:before,
+.material-icons.hamburgled.hamburger:before,
+svg.octicon-three-bars.hamburgled.hamburger,
+svg.octicon-grabber.hamburgled.hamburger,
+.ion-navicon-round.hamburgled.hamburger:before,
+.ion-navicon.hamburgled.hamburger:before,
+.ion-drag.hamburgled.hamburger:before,
+.fi-list.hamburgled.hamburger:before,
+.el-lines.hamburgled.hamburger:before {
+  background-image: url('chrome-extension://__MSG_@@extension_id__/hamburger.png');
+}
+
+.fa-navicon.hamburgled:before,
+.fa-reorder.hamburgled:before,
+.fa-bars.hamburgled:before,
+span.octicon-three-bars.hamburgled:before,
+span.octicon-grabber.hamburgled:before,
+i.octicon-three-bars.hamburgled:before,
+i.octicon-grabber.hamburgled:before,
+.glyphicons-menu-hamburger.hamburgled:before,
+.glyphicon-menu-hamburger.hamburgled:before,
+.halflings-menu-hamburger.hamburgled:before,
+.material-icons.hamburgled:before,
+svg.octicon-three-bars.hamburgled,
+svg.octicon-grabber.hamburgled,
+.ion-navicon-round.hamburgled:before,
+.ion-navicon.hamburgled:before,
+.ion-drag.hamburgled:before,
+.fi-list.hamburgled:before,
+.el-lines.hamburgled:before {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   display: inline-block;
 }
 
-.fa-navicon.hamburgled.deliciously-hamburgled:before,
-.fa-reorder.hamburgled.deliciously-hamburgled:before,
-.fa-bars.hamburgled.deliciously-hamburgled:before,
-span.octicon-three-bars.hamburgled.deliciously-hamburgled:before,
-span.octicon-grabber.hamburgled.deliciously-hamburgled:before,
-i.octicon-three-bars.hamburgled.deliciously-hamburgled:before,
-i.octicon-grabber.hamburgled.deliciously-hamburgled:before,
-.glyphicons-menu-hamburger.hamburgled.deliciously-hamburgled:before,
-.glyphicon-menu-hamburger.hamburgled.deliciously-hamburgled:before,
-.halflings-menu-hamburger.hamburgled.deliciously-hamburgled:before,
-.material-icons.hamburgled.deliciously-hamburgled:before,
-.ion-navicon-round.hamburgled.deliciously-hamburgled:before,
-.ion-navicon.hamburgled.deliciously-hamburgled:before,
-.ion-drag.hamburgled.deliciously-hamburgled:before,
-.fi-list.hamburgled.deliciously-hamburgled:before,
-.el-lines.hamburgled.deliciously-hamburgled:before {
+.fa-navicon.hamburgled:before,
+.fa-reorder.hamburgled:before,
+.fa-bars.hamburgled:before,
+span.octicon-three-bars.hamburgled:before,
+span.octicon-grabber.hamburgled:before,
+i.octicon-three-bars.hamburgled:before,
+i.octicon-grabber.hamburgled:before,
+.glyphicons-menu-hamburger.hamburgled:before,
+.glyphicon-menu-hamburger.hamburgled:before,
+.halflings-menu-hamburger.hamburgled:before,
+.material-icons.hamburgled:before,
+.ion-navicon-round.hamburgled:before,
+.ion-navicon.hamburgled:before,
+.ion-drag.hamburgled:before,
+.fi-list.hamburgled:before,
+.el-lines.hamburgled:before {
   content: "";
   width: 100%;
   height: 100%;
 }
 
-.glyphicons-menu-hamburger.hamburgled.deliciously-hamburgled,
-.glyphicon-menu-hamburger.hamburgled.deliciously-hamburgled,
-.halflings-menu-hamburger.hamburgled.deliciously-hamburgled,
-.material-icons.hamburgled.deliciously-hamburgled {
+.glyphicons-menu-hamburger.hamburgled,
+.glyphicon-menu-hamburger.hamburgled,
+.halflings-menu-hamburger.hamburgled,
+.material-icons.hamburgled {
   font-size: 0 !important;
 }
 
-svg.octicon-three-bars.hamburgled.deliciously-hamburgled path,
-svg.octicon-grabber.hamburgled.deliciously-hamburgled path {
+svg.octicon-three-bars.hamburgled path,
+svg.octicon-grabber.hamburgled path {
   display: none;
 }

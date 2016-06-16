@@ -54,7 +54,7 @@
     return [width, height];
   }
 
-  function setHamburgerWidth(icon) {
+  function setHamburgerWidth(icon, iconClass) {
     let width = icon.clientWidth;
     let height = icon.clientHeight;
     [width, height] = removePadding(icon, width, height);
@@ -72,7 +72,7 @@
       icon.style.display = 'inline-block';
     }
     icon.classList.add('hamburgled');
-    icon.classList.add('deliciously-hamburgled');
+    icon.classList.add(iconClass);
   }
 
   const allIcons = Array.from(faIcons).
@@ -82,5 +82,8 @@
                          concat(Array.from(ionicons)).
                          concat(Array.from(foundIcons)).
                          concat(Array.from(elusiveIcons));
-  allIcons.forEach(icon => setHamburgerWidth(icon));
+  HamburgerStorage.load().then(options => {
+    const iconClass = options.icon || 'hotdog';
+    allIcons.forEach(icon => setHamburgerWidth(icon, iconClass));
+  });
 })();
