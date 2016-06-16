@@ -119,8 +119,6 @@
     }
   });
 
-  chrome.runtime.sendMessage({action: 'createContextMenu'});
-
   let clickedEl = null;
   document.addEventListener('mousedown', event => {
     if (event.button === 2) { // Right click
