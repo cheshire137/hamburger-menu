@@ -23,7 +23,8 @@
     "esnext": true,
     "globals": [
       "document",
-      "window"
+      "window",
+      "HamburgerStorage"
     ],
     "space": true,
     "rules": {

@@ -90,12 +90,93 @@
     icon.classList.add('hm-' + iconClass);
   }
 
-  const allIcons = faIcons.concat(octicons).concat(glyphicons).
-                           concat(materialIcons).concat(ionicons).
-                           concat(foundIcons).concat(elusiveIcons).
-                           concat(generic);
+  function hamburgerify(selector) {
+    HamburgerStorage.load().then(options => {
+      const iconClass = options.icon || 'hotdog';
+      const custom = Array.from(document.querySelectorAll(selector));
+      custom.forEach(icon => {
+        setHamburgerWidth(icon, iconClass);
+        const style = window.getComputedStyle(icon)
+        if (style.display === 'inline' || style.display === 'inline-block') {
+          icon.classList.add('hm-inline-style');
+        } else {
+          icon.classList.add('hm-block-style');
+        }
+      });
+    });
+  }
+
+  let allIcons = faIcons.concat(octicons).concat(glyphicons).
+                         concat(materialIcons).concat(ionicons).
+                         concat(foundIcons).concat(elusiveIcons).
+                         concat(generic);
   HamburgerStorage.load().then(options => {
     const iconClass = options.icon || 'hotdog';
+    const host = window.location.host;
     allIcons.forEach(icon => setHamburgerWidth(icon, iconClass));
+    if (options.overrides && options.overrides[host]) {
+      options.overrides[host].forEach(selector => hamburgerify(selector));
+    }
+  });
+
+  chrome.runtime.sendMessage({action: 'createContextMenu'});
+
+  let clickedEl = null;
+  document.addEventListener('mousedown', event => {
+    if (event.button === 2) { // Right click
+      clickedEl = event.target;
+    }
+  });
+
+  const hamburgerClasses = ['hamburgled', 'hm-before-style', 'hm-hotdog',
+                            'hm-hamburger', 'hm-inline-style',
+                            'hm-block-style'];
+
+  function describeElement(el) {
+    if (el.id) {
+      return '#' + el.id;
+    }
+    if (el.className && el.className.length > 0) {
+      const classes = el.className.split(/\s+/).filter(c => {
+        return c.length > 0 && hamburgerClasses.indexOf(c) < 0;
+      });
+      return '.' + classes.join('.');
+    }
+  }
+
+  function getElementSelector(el) {
+    if (!el) {
+      return null;
+    }
+    let selectors = [];
+    let selector = describeElement(el);
+    if (selector) {
+      selectors.push(selector);
+    }
+    let parent = el.parentNode;
+    while (parent) {
+      selector = describeElement(parent);
+      if (selector) {
+        selectors.push(selector);
+      }
+      parent = parent.parentNode;
+    }
+    if (selectors.length < 1) {
+      return null;
+    }
+    return selectors.reverse().join(' ');
+  }
+
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === 'getClickedElement') {
+      const selector = getElementSelector(clickedEl);
+      sendResponse(selector);
+      return true;
+    }
+    if (request.action === 'hamburgerify') {
+      hamburgerify(request.selector);
+      sendResponse();
+      return true;
+    }
   });
 })();

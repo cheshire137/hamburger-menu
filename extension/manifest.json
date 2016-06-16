@@ -5,8 +5,11 @@
   "description": "Replace the hamburger menu icon on various websites.",
   "version": "0.0.1",
   "permissions": [
-    "storage", "tabs", "http://*/*", "https://*/*"
+    "storage", "tabs", "contextMenus", "http://*/*", "https://*/*"
   ],
+  "background": {
+    "scripts": ["storage.js", "background.js"]
+  },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
