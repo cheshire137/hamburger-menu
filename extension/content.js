@@ -97,7 +97,7 @@
       custom.forEach(icon => {
         setHamburgerWidth(icon, iconClass);
         const style = window.getComputedStyle(icon)
-        if (style.display === 'inline' || style.display === 'inline-block') {
+        if (style.display === 'inline') {
           icon.classList.add('hm-inline-style');
         } else {
           icon.classList.add('hm-block-style');
@@ -119,10 +119,18 @@
     }
   });
 
+  function getRightClickTarget(el) {
+    const childNodes = ['PATH'];
+    if (childNodes.indexOf(el.nodeName) > -1) {
+      return el.parentNode;
+    }
+    return el;
+  }
+
   let clickedEl = null;
   document.addEventListener('mousedown', event => {
     if (event.button === 2) { // Right click
-      clickedEl = event.target;
+      clickedEl = getRightClickTarget(event.target);
     }
   });
 
