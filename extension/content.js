@@ -10,9 +10,11 @@
 
   // Material Icons
   const materialIcons =
-      Array.from(document.querySelectorAll('.material-icons')).filter(icon => {
-        return icon.textContent.trim() === 'reorder';
-      });
+      Array.from(document.querySelectorAll('.material-icons')).
+            filter(icon => {
+              const text = icon.textContent.trim();
+              return text === 'reorder' || text === 'menu';
+            });
 
   // Ionicons
   const ionicons = Array.from(document.querySelectorAll('.ion-navicon-round, .ion-navicon, .ion-drag'));
