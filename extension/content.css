@@ -1,42 +1,44 @@
-.fa-navicon.hamburgled.hotdog:before,
-.fa-reorder.hamburgled.hotdog:before,
-.fa-bars.hamburgled.hotdog:before,
-span.octicon-three-bars.hamburgled.hotdog:before,
-span.octicon-grabber.hamburgled.hotdog:before,
-i.octicon-three-bars.hamburgled.hotdog:before,
-i.octicon-grabber.hamburgled.hotdog:before,
-.glyphicons-menu-hamburger.hamburgled.hotdog:before,
-.glyphicon-menu-hamburger.hamburgled.hotdog:before,
-.halflings-menu-hamburger.hamburgled.hotdog:before,
-.material-icons.hamburgled.hotdog:before,
-svg.octicon-three-bars.hamburgled.hotdog,
-svg.octicon-grabber.hamburgled.hotdog,
-.ion-navicon-round.hamburgled.hotdog:before,
-.ion-navicon.hamburgled.hotdog:before,
-.ion-drag.hamburgled.hotdog:before,
-.fi-list.hamburgled.hotdog:before,
-.el-lines.hamburgled.hotdog:before {
+.fa-navicon.hamburgled.hm-hotdog:before,
+.fa-reorder.hamburgled.hm-hotdog:before,
+.fa-bars.hamburgled.hm-hotdog:before,
+span.octicon-three-bars.hamburgled.hm-hotdog:before,
+span.octicon-grabber.hamburgled.hm-hotdog:before,
+i.octicon-three-bars.hamburgled.hm-hotdog:before,
+i.octicon-grabber.hamburgled.hm-hotdog:before,
+.glyphicons-menu-hamburger.hamburgled.hm-hotdog:before,
+.glyphicon-menu-hamburger.hamburgled.hm-hotdog:before,
+.halflings-menu-hamburger.hamburgled.hm-hotdog:before,
+.material-icons.hamburgled.hm-hotdog:before,
+svg.octicon-three-bars.hamburgled.hm-hotdog,
+svg.octicon-grabber.hamburgled.hm-hotdog,
+.ion-navicon-round.hamburgled.hm-hotdog:before,
+.ion-navicon.hamburgled.hm-hotdog:before,
+.ion-drag.hamburgled.hm-hotdog:before,
+.fi-list.hamburgled.hm-hotdog:before,
+.el-lines.hamburgled.hm-hotdog:before,
+.icon.hamburger.hamburgled.hm-hotdog:before {
   background-image: url('chrome-extension://__MSG_@@extension_id__/hotdog.png');
 }
 
-.fa-navicon.hamburgled.hamburger:before,
-.fa-reorder.hamburgled.hamburger:before,
-.fa-bars.hamburgled.hamburger:before,
-span.octicon-three-bars.hamburgled.hamburger:before,
-span.octicon-grabber.hamburgled.hamburger:before,
-i.octicon-three-bars.hamburgled.hamburger:before,
-i.octicon-grabber.hamburgled.hamburger:before,
-.glyphicons-menu-hamburger.hamburgled.hamburger:before,
-.glyphicon-menu-hamburger.hamburgled.hamburger:before,
-.halflings-menu-hamburger.hamburgled.hamburger:before,
-.material-icons.hamburgled.hamburger:before,
-svg.octicon-three-bars.hamburgled.hamburger,
-svg.octicon-grabber.hamburgled.hamburger,
-.ion-navicon-round.hamburgled.hamburger:before,
-.ion-navicon.hamburgled.hamburger:before,
-.ion-drag.hamburgled.hamburger:before,
-.fi-list.hamburgled.hamburger:before,
-.el-lines.hamburgled.hamburger:before {
+.fa-navicon.hamburgled.hm-hamburger:before,
+.fa-reorder.hamburgled.hm-hamburger:before,
+.fa-bars.hamburgled.hm-hamburger:before,
+span.octicon-three-bars.hamburgled.hm-hamburger:before,
+span.octicon-grabber.hamburgled.hm-hamburger:before,
+i.octicon-three-bars.hamburgled.hm-hamburger:before,
+i.octicon-grabber.hamburgled.hm-hamburger:before,
+.glyphicons-menu-hamburger.hamburgled.hm-hamburger:before,
+.glyphicon-menu-hamburger.hamburgled.hm-hamburger:before,
+.halflings-menu-hamburger.hamburgled.hm-hamburger:before,
+.material-icons.hamburgled.hm-hamburger:before,
+svg.octicon-three-bars.hamburgled.hm-hamburger,
+svg.octicon-grabber.hamburgled.hm-hamburger,
+.ion-navicon-round.hamburgled.hm-hamburger:before,
+.ion-navicon.hamburgled.hm-hamburger:before,
+.ion-drag.hamburgled.hm-hamburger:before,
+.fi-list.hamburgled.hm-hamburger:before,
+.el-lines.hamburgled.hm-hamburger:before,
+.icon.hamburger.hamburgled.hm-hamburger:before {
   background-image: url('chrome-extension://__MSG_@@extension_id__/hamburger.png');
 }
 
@@ -57,7 +59,8 @@ svg.octicon-grabber.hamburgled,
 .ion-navicon.hamburgled:before,
 .ion-drag.hamburgled:before,
 .fi-list.hamburgled:before,
-.el-lines.hamburgled:before {
+.el-lines.hamburgled:before,
+.icon.hamburger.hamburgled:before {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -79,7 +82,8 @@ i.octicon-grabber.hamburgled:before,
 .ion-navicon.hamburgled:before,
 .ion-drag.hamburgled:before,
 .fi-list.hamburgled:before,
-.el-lines.hamburgled:before {
+.el-lines.hamburgled:before,
+.icon.hamburger.hamburgled:before {
   content: "";
   width: 100%;
   height: 100%;

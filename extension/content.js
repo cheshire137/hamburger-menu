@@ -23,6 +23,9 @@
   // Elusive
   const elusiveIcons = document.querySelectorAll('.el-lines');
 
+  // As seen on http://www.teehanlax.com/
+  const generic = document.querySelectorAll('.icon.hamburger');
+
   function removePadding(icon, width, height) {
     let style;
     try {
@@ -72,7 +75,7 @@
       icon.style.display = 'inline-block';
     }
     icon.classList.add('hamburgled');
-    icon.classList.add(iconClass);
+    icon.classList.add('hm-' + iconClass);
   }
 
   const allIcons = Array.from(faIcons).
@@ -81,7 +84,8 @@
                          concat(materialIcons).
                          concat(Array.from(ionicons)).
                          concat(Array.from(foundIcons)).
-                         concat(Array.from(elusiveIcons));
+                         concat(Array.from(elusiveIcons)).
+                         concat(Array.from(generic));
   HamburgerStorage.load().then(options => {
     const iconClass = options.icon || 'hotdog';
     allIcons.forEach(icon => setHamburgerWidth(icon, iconClass));
