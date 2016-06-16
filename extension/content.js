@@ -1,12 +1,12 @@
 (function() {
   // Font Awesome
-  const faIcons = document.querySelectorAll('.fa-bars, .fa-navicon, .fa-reorder');
+  const faIcons = Array.from(document.querySelectorAll('.fa-bars, .fa-navicon, .fa-reorder'));
 
   // Octicons
-  const octicons = document.querySelectorAll('.octicon-three-bars, .octicon-grabber');
+  const octicons = Array.from(document.querySelectorAll('.octicon-three-bars, .octicon-grabber'));
 
   // Glyphicons
-  const glyphicons = document.querySelectorAll('.glyphicons-menu-hamburger, .halflings-menu-hamburger, .glyphicon-menu-hamburger');
+  const glyphicons = Array.from(document.querySelectorAll('.glyphicons-menu-hamburger, .halflings-menu-hamburger, .glyphicon-menu-hamburger'));
 
   // Material Icons
   const materialIcons =
@@ -15,16 +15,25 @@
       });
 
   // Ionicons
-  const ionicons = document.querySelectorAll('.ion-navicon-round, .ion-navicon, .ion-drag');
+  const ionicons = Array.from(document.querySelectorAll('.ion-navicon-round, .ion-navicon, .ion-drag'));
 
   // Foundation
-  const foundIcons = document.querySelectorAll('.fi-list');
+  const foundIcons = Array.from(document.querySelectorAll('.fi-list'));
 
   // Elusive
-  const elusiveIcons = document.querySelectorAll('.el-lines');
+  const elusiveIcons = Array.from(document.querySelectorAll('.el-lines'));
 
   // As seen on http://www.teehanlax.com/
-  const generic = document.querySelectorAll('.icon.hamburger');
+  const generic = Array.from(document.querySelectorAll('.icon.hamburger'));
+
+  const beforeStyleIcons = faIcons.concat(octicons).concat(glyphicons).
+                                   concat(materialIcons).concat(ionicons).
+                                   concat(foundIcons).concat(elusiveIcons).
+                                   concat(generic);
+
+  beforeStyleIcons.forEach(icon => {
+    icon.classList.add('hm-before-style');
+  });
 
   function removePadding(icon, width, height) {
     let style;
@@ -78,14 +87,10 @@
     icon.classList.add('hm-' + iconClass);
   }
 
-  const allIcons = Array.from(faIcons).
-                         concat(Array.from(octicons)).
-                         concat(Array.from(glyphicons)).
-                         concat(materialIcons).
-                         concat(Array.from(ionicons)).
-                         concat(Array.from(foundIcons)).
-                         concat(Array.from(elusiveIcons)).
-                         concat(Array.from(generic));
+  const allIcons = faIcons.concat(octicons).concat(glyphicons).
+                           concat(materialIcons).concat(ionicons).
+                           concat(foundIcons).concat(elusiveIcons).
+                           concat(generic);
   HamburgerStorage.load().then(options => {
     const iconClass = options.icon || 'hotdog';
     allIcons.forEach(icon => setHamburgerWidth(icon, iconClass));

@@ -1,89 +1,25 @@
-.fa-navicon.hamburgled.hm-hotdog:before,
-.fa-reorder.hamburgled.hm-hotdog:before,
-.fa-bars.hamburgled.hm-hotdog:before,
-span.octicon-three-bars.hamburgled.hm-hotdog:before,
-span.octicon-grabber.hamburgled.hm-hotdog:before,
-i.octicon-three-bars.hamburgled.hm-hotdog:before,
-i.octicon-grabber.hamburgled.hm-hotdog:before,
-.glyphicons-menu-hamburger.hamburgled.hm-hotdog:before,
-.glyphicon-menu-hamburger.hamburgled.hm-hotdog:before,
-.halflings-menu-hamburger.hamburgled.hm-hotdog:before,
-.material-icons.hamburgled.hm-hotdog:before,
+.hm-before-style.hamburgled.hm-hotdog:before,
 svg.octicon-three-bars.hamburgled.hm-hotdog,
-svg.octicon-grabber.hamburgled.hm-hotdog,
-.ion-navicon-round.hamburgled.hm-hotdog:before,
-.ion-navicon.hamburgled.hm-hotdog:before,
-.ion-drag.hamburgled.hm-hotdog:before,
-.fi-list.hamburgled.hm-hotdog:before,
-.el-lines.hamburgled.hm-hotdog:before,
-.icon.hamburger.hamburgled.hm-hotdog:before {
+svg.octicon-grabber.hamburgled.hm-hotdog {
   background-image: url('chrome-extension://__MSG_@@extension_id__/hotdog.png');
 }
 
-.fa-navicon.hamburgled.hm-hamburger:before,
-.fa-reorder.hamburgled.hm-hamburger:before,
-.fa-bars.hamburgled.hm-hamburger:before,
-span.octicon-three-bars.hamburgled.hm-hamburger:before,
-span.octicon-grabber.hamburgled.hm-hamburger:before,
-i.octicon-three-bars.hamburgled.hm-hamburger:before,
-i.octicon-grabber.hamburgled.hm-hamburger:before,
-.glyphicons-menu-hamburger.hamburgled.hm-hamburger:before,
-.glyphicon-menu-hamburger.hamburgled.hm-hamburger:before,
-.halflings-menu-hamburger.hamburgled.hm-hamburger:before,
-.material-icons.hamburgled.hm-hamburger:before,
+.hm-before-style.hamburgled.hm-hamburger:before,
 svg.octicon-three-bars.hamburgled.hm-hamburger,
-svg.octicon-grabber.hamburgled.hm-hamburger,
-.ion-navicon-round.hamburgled.hm-hamburger:before,
-.ion-navicon.hamburgled.hm-hamburger:before,
-.ion-drag.hamburgled.hm-hamburger:before,
-.fi-list.hamburgled.hm-hamburger:before,
-.el-lines.hamburgled.hm-hamburger:before,
-.icon.hamburger.hamburgled.hm-hamburger:before {
+svg.octicon-grabber.hamburgled.hm-hamburger {
   background-image: url('chrome-extension://__MSG_@@extension_id__/hamburger.png');
 }
 
-.fa-navicon.hamburgled:before,
-.fa-reorder.hamburgled:before,
-.fa-bars.hamburgled:before,
-span.octicon-three-bars.hamburgled:before,
-span.octicon-grabber.hamburgled:before,
-i.octicon-three-bars.hamburgled:before,
-i.octicon-grabber.hamburgled:before,
-.glyphicons-menu-hamburger.hamburgled:before,
-.glyphicon-menu-hamburger.hamburgled:before,
-.halflings-menu-hamburger.hamburgled:before,
-.material-icons.hamburgled:before,
+.hm-before-style.hamburgled:before,
 svg.octicon-three-bars.hamburgled,
-svg.octicon-grabber.hamburgled,
-.ion-navicon-round.hamburgled:before,
-.ion-navicon.hamburgled:before,
-.ion-drag.hamburgled:before,
-.fi-list.hamburgled:before,
-.el-lines.hamburgled:before,
-.icon.hamburger.hamburgled:before {
+svg.octicon-grabber.hamburgled {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   display: inline-block;
 }
 
-.fa-navicon.hamburgled:before,
-.fa-reorder.hamburgled:before,
-.fa-bars.hamburgled:before,
-span.octicon-three-bars.hamburgled:before,
-span.octicon-grabber.hamburgled:before,
-i.octicon-three-bars.hamburgled:before,
-i.octicon-grabber.hamburgled:before,
-.glyphicons-menu-hamburger.hamburgled:before,
-.glyphicon-menu-hamburger.hamburgled:before,
-.halflings-menu-hamburger.hamburgled:before,
-.material-icons.hamburgled:before,
-.ion-navicon-round.hamburgled:before,
-.ion-navicon.hamburgled:before,
-.ion-drag.hamburgled:before,
-.fi-list.hamburgled:before,
-.el-lines.hamburgled:before,
-.icon.hamburger.hamburgled:before {
+.hm-before-style.hamburgled:before {
   content: "";
   width: 100%;
   height: 100%;
