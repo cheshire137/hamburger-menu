@@ -29,7 +29,7 @@
   vertical-align: middle;
   text-align: center;
 }
-.subtitle {
+.icon-options .subtitle {
   width: 4em;
 }
 .radio.saved {
@@ -40,4 +40,11 @@
 }
 .separator {
   padding: 0 1em;
+}
+.hidden {
+  display: none;
+}
+td.selector {
+  font-family: "Source Code Pro", "Monaco", "Inconsolata", monospace;
+  font-size: 12px;
 }
