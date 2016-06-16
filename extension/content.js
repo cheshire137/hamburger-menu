@@ -120,9 +120,8 @@
   });
 
   function getRightClickTarget(el) {
-    const childNodes = ['PATH'];
-    if (childNodes.indexOf(el.nodeName) > -1) {
-      return el.parentNode;
+    if (el.nodeName === 'PATH') {
+      return el.closest('svg');
     }
     return el;
   }
@@ -142,11 +141,14 @@
     if (el.id) {
       return '#' + el.id;
     }
-    if (el.className && el.className.length > 0) {
-      const classes = el.className.split(/\s+/).filter(c => {
-        return c.length > 0 && hamburgerClasses.indexOf(c) < 0;
-      });
-      return '.' + classes.join('.');
+    if (el.classList) {
+      let classes = Array.from(el.classList);
+      if (classes.length > 0) {
+        classes = classes.filter(c => {
+          return c.length > 0 && hamburgerClasses.indexOf(c) < 0;
+        });
+        return '.' + classes.join('.');
+      }
     }
   }
 
