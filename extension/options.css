@@ -1,0 +1,26 @@
+.header {
+  padding: 80px 0 40px;
+}
+.radio input {
+  margin: 10px;
+}
+.radio img {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.radio {
+  padding: 0 0 10px;
+}
+.icon-options {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.icon-options > * {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.subtitle {
+  width: 4em;
+}

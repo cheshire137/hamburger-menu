@@ -19,5 +19,6 @@
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "web_accessible_resources": ["hotdog.png", "options.html"]
+  "web_accessible_resources": ["hotdog.png", "hamburger.png", "options.css",
+                               "options.html"]
 }
