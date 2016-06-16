@@ -1,16 +1,9 @@
 .header {
-  padding: 80px 0 40px;
-}
-.radio input {
-  margin: 10px;
-}
-.radio img {
-  margin-bottom: 10px;
-  display: inline-block;
+  padding: 40px 0;
 }
 .radio {
   border: 2px solid transparent;
-  padding: 0 0 10px;
+  padding: 0 0 20px;
   border-radius: 4px;
   -webkit-transition: border-color 0.85s ease-in-out;
   -moz-transition: border-color 0.85s ease-in-out;
@@ -18,10 +11,18 @@
   -o-transition: border-color 0.85s ease-in-out;
   transition: border-color 0.85s ease-in-out;
 }
+.radio input {
+  margin: 10px 0 20px;
+}
+.radio img {
+  margin-bottom: 20px;
+  display: inline-block;
+}
 .icon-options {
   display: table;
   width: 100%;
   table-layout: fixed;
+  margin: 10px auto;
 }
 .icon-options > * {
   display: table-cell;
@@ -33,4 +34,10 @@
 }
 .radio.saved {
   border-color: #97cd76;
+}
+.footer {
+  font-size: 13px;
+}
+.separator {
+  padding: 0 1em;
 }
