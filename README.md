@@ -1,6 +1,6 @@
 # Hamburger Menu
 
-**[Install in the Chrome Web Store](https://chrome.google.com/webstore/detail/hamburger-menu/eilghennaccfpohmdffhdpckacgdaohe?hl=en)
+**[Install in the Chrome Web Store](https://chrome.google.com/webstore/detail/hamburger-menu/eilghennaccfpohmdffhdpckacgdaohe?hl=en)**
 
 ![Screenshot](https://raw.githubusercontent.com/cheshire137/hamburger-menu/master/promo-assets/440x280.png)
 
