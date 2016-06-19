@@ -1,0 +1,12 @@
+.title img {
+  vertical-align: middle;
+}
+.title {
+  line-height: 48px;
+}
+.hidden {
+  display: none;
+}
+.host {
+  font-weight: bold;
+}

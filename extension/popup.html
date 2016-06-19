@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hamburger Menu Popup</title>
+  <link href="bulma.min.css" rel="stylesheet" media="screen">
+  <link href="popup.css" rel="stylesheet" media="screen">
+</head>
+<body>
+  <header class="header">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        <img src="icon48.png" alt="" width="48" height="48">
+        Hamburger Menu
+      </h1>
+    </div>
+  </header>
+  <section class="section">
+    <div class="container">
+      <p id="loading-message">Loading...</p>
+      <p class="hidden" id="no-overrides-message">
+        You have no custom overrides for <span class="host"></span>.
+      </p>
+      <div id="overrides-container" class="hidden">
+        <h2 class="subtitle">Overrides for <span class="host"></span></h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>CSS Selector</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="overrides-tbody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <a href="#options">Options</a>
+  </footer>
+  <script src="storage.js"></script>
+  <script src="eventful.js"></script>
+  <script src="overrides-helper.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
