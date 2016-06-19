@@ -6,4 +6,4 @@ Adds a popup that lets you view your overrides for that host. Allows you to edit
 
 ## Version 0.0.1
 
-Initial release. Provides ability to right-click elements on the page and make them display as a hotdog or hamburger. Has an options page to choose betwee hotdogs and hamburgers. Allows removal of custom overrides via options page. Automatically replaces particular icons from Font Awesome, Octicons, Glyphicons, Material Icons, Ionicons, Foundation, and Elusive with a hamburger or hotdog.
+Initial release. Provides ability to right-click elements on the page and make them display as a hotdog or hamburger. Has an options page to choose between hotdogs and hamburgers. Allows removal of custom overrides via options page. Automatically replaces particular icons from Font Awesome, Octicons, Glyphicons, Material Icons, Ionicons, Foundation, and Elusive with a hamburger or hotdog.
