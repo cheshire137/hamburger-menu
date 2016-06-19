@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 0.0.3
+
+Fixed bug where you could hamburgerify something and an empty CSS selector would be saved. Better hamburgerification of images.
+
 ## Version 0.0.2
 
 Adds a popup that lets you view your overrides for that host. Allows you to edit hamburger overrides on the options page and in the popup. Popup provides help for how to use the extension as well as linking to the options page.
