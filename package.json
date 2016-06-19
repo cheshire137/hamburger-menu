@@ -24,7 +24,9 @@
     "globals": [
       "document",
       "window",
-      "HamburgerStorage"
+      "HamburgerStorage",
+      "chrome",
+      "URL"
     ],
     "space": true,
     "rules": {

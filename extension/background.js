@@ -1,6 +1,6 @@
 function hamburgerify(info, tab) {
   const host = new URL(info.pageUrl).host;
-  chrome.tabs.sendMessage(tab.id, {action: 'getClickedElement'}, selector => {
+  chrome.tabs.sendMessage(tab.id, { action: 'getClickedElement' }, selector => {
     console.debug(host, selector);
     HamburgerStorage.load().then(options => {
       if (!options.overrides) {
@@ -16,7 +16,7 @@ function hamburgerify(info, tab) {
         console.debug(options.overrides[host].length, 'override(s) for', host,
                       options.overrides[host]);
         chrome.tabs.sendMessage(tab.id,
-                                {action: 'hamburgerify', selector: selector});
+                                { action: 'hamburgerify', selector });
       });
     });
   });

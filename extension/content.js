@@ -141,7 +141,7 @@
 
   function describeElement(el) {
     if (el.id) {
-      return '#' + el.id;
+      return `#${el.id}`;
     }
     if (el.classList) {
       let classes = Array.from(el.classList);
@@ -149,7 +149,7 @@
         classes = classes.filter(c => {
           return c.length > 0 && hamburgerClasses.indexOf(c) < 0;
         });
-        return '.' + classes.join('.');
+        return `.${classes.join('.')}`;
       }
     }
   }
@@ -158,7 +158,7 @@
     if (!el) {
       return null;
     }
-    let selectors = [];
+    const selectors = [];
     let selector = describeElement(el);
     if (selector) {
       selectors.push(selector);

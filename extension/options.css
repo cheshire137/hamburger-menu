@@ -47,4 +47,5 @@
 td.selector {
   font-family: "Source Code Pro", "Monaco", "Inconsolata", monospace;
   font-size: 12px;
+  word-break: break-word;
 }
