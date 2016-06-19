@@ -38,7 +38,13 @@ td.selector {
 .table {
   margin-bottom: 0;
 }
-#no-overrides-message {
+#no-overrides-message,
+#no-overrides-options-message {
   padding: 10px 20px 20px;
   margin: 0;
+}
+#focus-eater {
+  position: absolute;
+  left: -900px;
+  top: -900px;
 }

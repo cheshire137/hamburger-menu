@@ -9,6 +9,7 @@
   <link href="popup.css" rel="stylesheet" media="screen">
 </head>
 <body>
+  <input type="checkbox" tabindex="1" id="focus-eater">
   <header class="header">
     <div class="container has-text-centered">
       <h1 class="title">
@@ -20,6 +21,12 @@
   <section class="section">
     <div class="container">
       <p id="loading-message">Loading...</p>
+      <p class="hidden" id="no-overrides-options-message">
+        You can't hamburgerify the Hamburger Menu options page!<br>
+        <br>
+        Try right-clicking an icon on another page and choosing &ldquo;Make
+        this a hamburger.&rdquo;
+      </p>
       <p class="hidden" id="no-overrides-message">
         You have no custom overrides for <span class="host"></span>. Try
         right-clicking an icon on the page and choosing &ldquo;Make this a

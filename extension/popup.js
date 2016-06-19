@@ -10,6 +10,8 @@ class PopupPage {
     this.noOverridesMessage = document.getElementById('no-overrides-message');
     this.hostElements = Array.from(document.querySelectorAll('.host'));
     this.links = Array.from(document.querySelectorAll('a'));
+    this.noOverridesOptionsPageMessage =
+        document.getElementById('no-overrides-options-message');
   }
 
   setup() {
@@ -40,20 +42,24 @@ class PopupPage {
   }
 
   showHostOverrides() {
-    this.getActiveTabHost().then(host => {
+    this.getActiveTabHost().then(tabInfo => {
       this.hostElements.forEach(el => {
-        el.textContent = host;
+        el.textContent = tabInfo.host;
       });
       this.overridesHelper = new window.OverridesHelper({
         options: this.options,
         overridesTbody: this.overridesTbody,
         overridesContainer: this.overridesContainer,
         showHost: false,
-        host,
+        host: tabInfo.host,
         confirmDelete: false
       });
       this.overridesHelper.addListener('no-overrides', () => {
-        this.noOverridesMessage.classList.remove('hidden');
+        if (tabInfo.isOptionsPage) {
+          this.noOverridesOptionsPageMessage.classList.remove('hidden');
+        } else {
+          this.noOverridesMessage.classList.remove('hidden');
+        }
       });
       this.overridesHelper.listOverrides();
     });
@@ -62,7 +68,12 @@ class PopupPage {
   getActiveTabHost() {
     return new Promise(resolve => {
       chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
-        resolve(new URL(tabs[0].url).host);
+        const optionsUrl = chrome.extension.getURL('options.html');
+        const tabUrl = tabs[0].url;
+        resolve({
+          host: new URL(tabUrl).host,
+          isOptionsPage: optionsUrl === tabUrl
+        });
       });
     });
   }
