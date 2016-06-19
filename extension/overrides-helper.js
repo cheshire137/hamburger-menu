@@ -95,7 +95,7 @@ class OverridesHelper extends window.Eventful {
   getSaveButton(host, selector) {
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'hidden button save-button';
+    button.className = 'hidden button save-button is-small';
     button.onclick = event => {
       this.saveSelector(event, host, selector);
     };
@@ -106,7 +106,7 @@ class OverridesHelper extends window.Eventful {
   getEditButton(host, selector) {
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'button edit-button';
+    button.className = 'button edit-button is-small';
     button.onclick = event => {
       this.editSelector(event, host, selector);
     };
@@ -191,7 +191,7 @@ class OverridesHelper extends window.Eventful {
   getRemoveButton(host, selector) {
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'button remove-button';
+    button.className = 'button remove-button is-small';
     button.onclick = event => {
       const iconClass = this.options.icon || 'hotdog';
       const confirmMessage = `Are you sure you want to remove this ${iconClass} styling for ${host}?`;
@@ -206,7 +206,7 @@ class OverridesHelper extends window.Eventful {
   getCancelButton(host, selector) {
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'button cancel-button hidden';
+    button.className = 'button cancel-button hidden is-small';
     button.onclick = event => {
       this.cancelEditSelector(event, host, selector);
     };

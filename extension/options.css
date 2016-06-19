@@ -49,6 +49,6 @@ td.selector {
   font-size: 12px;
   word-break: break-word;
 }
-.button + .button {
-  margin-left: 10px;
+.button {
+  margin-right: 10px;
 }
