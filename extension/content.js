@@ -102,7 +102,7 @@
         } else {
           setHamburgerWidth(el, iconClass);
           const style = window.getComputedStyle(el);
-          if (style.display === 'inline') {
+          if (style.display === 'inline' || el.classList.contains('fa')) {
             el.classList.add('hm-inline-style');
           } else {
             el.classList.add('hm-block-style');

@@ -2,7 +2,7 @@
 
 ## Version 0.0.3
 
-Fixed bug where you could hamburgerify something and an empty CSS selector would be saved. Better hamburgerification of images.
+Fixed bug where you could hamburgerify something and an empty CSS selector would be saved. Better hamburgerification of images and Font Awesome icon overrides.
 
 ## Version 0.0.2
 
