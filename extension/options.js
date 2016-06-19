@@ -8,6 +8,12 @@ class OptionsPage {
         Array.from(document.querySelectorAll('input[name="icon"]'));
     this.overridesContainer = document.getElementById('overrides-container');
     this.overridesTbody = document.getElementById('overrides-tbody');
+    this.versionEl = document.getElementById('extension-version');
+  }
+
+  getManifest() {
+    const url = chrome.extension.getURL('manifest.json');
+    return window.fetch(url).then(response => response.json());
   }
 
   setup() {
@@ -25,6 +31,11 @@ class OptionsPage {
       });
       this.overridesHelper.listOverrides();
     });
+    this.getManifest().then(this.showExtensionVersion.bind(this));
+  }
+
+  showExtensionVersion(manifest) {
+    this.versionEl.textContent = manifest.version;
   }
 
   selectChosenIcon() {
