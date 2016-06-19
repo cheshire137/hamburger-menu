@@ -10,3 +10,12 @@
 .host {
   font-weight: bold;
 }
+td.selector {
+  font-family: "Source Code Pro", "Monaco", "Inconsolata", monospace;
+  font-size: 12px;
+  word-break: break-word;
+}
+.footer {
+  padding: 10px 20px;
+  font-size: 12px;
+}

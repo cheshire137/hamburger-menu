@@ -72,7 +72,7 @@ class OverridesHelper extends window.Eventful {
       tr.appendChild(this.getHostCell(host));
     }
     tr.appendChild(this.getSelectorCell(selector));
-    tr.appendChild(this.getRemoveCell(host, selector));
+    tr.appendChild(this.getOptionsCell(host, selector));
     this.overridesTbody.appendChild(tr);
   }
 
@@ -83,10 +83,22 @@ class OverridesHelper extends window.Eventful {
     return hostCell;
   }
 
-  getRemoveCell(host, selector) {
-    const removeCell = document.createElement('td');
-    removeCell.appendChild(this.getRemoveButton(host, selector));
-    return removeCell;
+  getOptionsCell(host, selector) {
+    const optionsCell = document.createElement('td');
+    optionsCell.appendChild(this.getEditButton(host, selector));
+    optionsCell.appendChild(this.getRemoveButton(host, selector));
+    return optionsCell;
+  }
+
+  getEditButton(host, selector) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'button edit-button';
+    button.onclick = event => {
+      this.editSelector(event, host, selector);
+    };
+    button.textContent = 'Edit';
+    return button;
   }
 
   getSelectorCell(selector) {
@@ -96,15 +108,61 @@ class OverridesHelper extends window.Eventful {
     return selectorCell;
   }
 
+  editSelector(event, host, selector) {
+    event.preventDefault();
+    const button = event.target;
+    button.disabled = true;
+    const optionsCell = button.parentNode;
+    const row = optionsCell.parentNode;
+    const selectorCell = row.querySelector('td.selector');
+    selectorCell.style.width = `${selectorCell.clientWidth}px`;
+    while (selectorCell.hasChildNodes()) {
+      selectorCell.removeChild(selectorCell.lastChild);
+    }
+    selectorCell.appendChild(this.getSelectorInput(host, selector));
+  }
+
+  getSelectorInput(host, selector) {
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.value = selector;
+    input.className = 'selector-edit input';
+    input.addEventListener('keypress', event => {
+      if (event.keyCode === 13) { // Enter
+        this.updateSelector(event, host, selector, event.target.value.trim());
+      }
+    });
+    return input;
+  }
+
+  updateSelector(event, host, oldSelector, newSelector) {
+    const input = event.target;
+    input.disabled = true;
+    const row = input.closest('tr');
+    const index = this.options.overrides[host].indexOf(oldSelector);
+    if (index < 0) {
+      return;
+    }
+    this.options.overrides[host] = this.options.overrides[host].slice(0, index).
+        concat([newSelector]).
+        concat(this.options.overrides[host].slice(index + 1));
+    HamburgerStorage.save(this.options).then(() => {
+      row.querySelector('.edit-button').disabled = false;
+      const cell = input.parentNode;
+      input.remove();
+      cell.textContent = newSelector;
+    });
+  }
+
   getRemoveButton(host, selector) {
-    const removeButton = document.createElement('button');
-    removeButton.type = 'button';
-    removeButton.className = 'button';
-    removeButton.onclick = event => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'button';
+    button.onclick = event => {
       this.removeSelector(event, host, selector);
     };
-    removeButton.textContent = 'Remove';
-    return removeButton;
+    button.textContent = 'Remove';
+    return button;
   }
 }
 
