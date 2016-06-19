@@ -24,13 +24,10 @@ function hamburgerify(info, tab) {
 
 function constructMenu() {
   console.debug('adding hamburger context menu');
-  HamburgerStorage.load().then(options => {
-    const icon = options.icon || 'hotdog';
-    chrome.contextMenus.create({
-      title: `Make this a ${icon}`,
-      contexts: ['all'],
-      onclick: hamburgerify
-    });
+  chrome.contextMenus.create({
+    title: 'Make this a hamburger',
+    contexts: ['all'],
+    onclick: hamburgerify
   });
 }
 
