@@ -49,7 +49,8 @@ class PopupPage {
         overridesTbody: this.overridesTbody,
         overridesContainer: this.overridesContainer,
         showHost: false,
-        host
+        host,
+        confirmDelete: false
       });
       this.overridesHelper.addListener('no-overrides', () => {
         this.noOverridesMessage.classList.remove('hidden');

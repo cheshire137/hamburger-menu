@@ -6,6 +6,7 @@ class OverridesHelper extends window.Eventful {
     this.overridesTbody = opts.overridesTbody;
     this.host = opts.host;
     this.showHost = opts.showHost;
+    this.confirmDelete = opts.confirmDelete;
   }
 
   hasOverrides() {
@@ -192,7 +193,11 @@ class OverridesHelper extends window.Eventful {
     button.type = 'button';
     button.className = 'button remove-button';
     button.onclick = event => {
-      this.removeSelector(event, host, selector);
+      const iconClass = this.options.icon || 'hotdog';
+      const confirmMessage = `Are you sure you want to remove this ${iconClass} styling for ${host}?`;
+      if (!this.confirmDelete || window.confirm(confirmMessage)) {
+        this.removeSelector(event, host, selector);
+      }
     };
     button.textContent = 'Remove';
     return button;

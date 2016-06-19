@@ -20,7 +20,8 @@ class OptionsPage {
         options: this.options,
         overridesTbody: this.overridesTbody,
         overridesContainer: this.overridesContainer,
-        showHost: true
+        showHost: true,
+        confirmDelete: true
       });
       this.overridesHelper.listOverrides();
     });
