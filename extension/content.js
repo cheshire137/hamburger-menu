@@ -89,29 +89,33 @@
       icon.style.display = 'inline-block';
     }
     icon.classList.add('hamburgled');
-    icon.classList.add('hm-' + iconClass);
+    icon.classList.add(`hm-${iconClass}`);
   }
 
   function hamburgerify(selector) {
     HamburgerStorage.load().then(options => {
       const iconClass = options.icon || 'hotdog';
-      const custom = Array.from(document.querySelectorAll(selector));
-      custom.forEach(icon => {
-        setHamburgerWidth(icon, iconClass);
-        const style = window.getComputedStyle(icon)
-        if (style.display === 'inline') {
-          icon.classList.add('hm-inline-style');
+      Array.from(document.querySelectorAll(selector)).forEach(el => {
+        if (el.nodeName === 'IMG') {
+          el.setAttribute('data-unhamburgerified-src', el.src);
+          el.src = chrome.extension.getURL(`${iconClass}.png`);
         } else {
-          icon.classList.add('hm-block-style');
+          setHamburgerWidth(el, iconClass);
+          const style = window.getComputedStyle(el);
+          if (style.display === 'inline') {
+            el.classList.add('hm-inline-style');
+          } else {
+            el.classList.add('hm-block-style');
+          }
         }
       });
     });
   }
 
-  let allIcons = faIcons.concat(octicons).concat(glyphicons).
-                         concat(materialIcons).concat(ionicons).
-                         concat(foundIcons).concat(elusiveIcons).
-                         concat(generic);
+  const allIcons = faIcons.concat(octicons).concat(glyphicons).
+                           concat(materialIcons).concat(ionicons).
+                           concat(foundIcons).concat(elusiveIcons).
+                           concat(generic);
   HamburgerStorage.load().then(options => {
     const iconClass = options.icon || 'hotdog';
     const host = window.location.host;
@@ -151,6 +155,9 @@
         });
         return `.${classes.join('.')}`;
       }
+    }
+    if (el.parentNode) {
+      return el.nodeName.toLowerCase();
     }
   }
 
