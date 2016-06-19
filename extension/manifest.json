@@ -3,7 +3,7 @@
   "name": "Hamburger Menu",
   "short_name": "Hamburger Menu",
   "description": "Replace the hamburger menu icon on various websites.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "permissions": [
     "storage", "tabs", "contextMenus", "http://*/*", "https://*/*"
   ],
