@@ -39,7 +39,6 @@ class OverridesHelper extends window.Eventful {
 
   listOverridesForHost(host) {
     const selectors = this.options.overrides[host];
-    console.log('selectors', selectors);
     selectors.forEach(selector => {
       this.listOverride(host, selector);
     });
@@ -86,8 +85,21 @@ class OverridesHelper extends window.Eventful {
   getOptionsCell(host, selector) {
     const optionsCell = document.createElement('td');
     optionsCell.appendChild(this.getEditButton(host, selector));
+    optionsCell.appendChild(this.getSaveButton(host, selector));
     optionsCell.appendChild(this.getRemoveButton(host, selector));
+    optionsCell.appendChild(this.getCancelButton(host, selector));
     return optionsCell;
+  }
+
+  getSaveButton(host, selector) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'hidden button save-button';
+    button.onclick = event => {
+      this.saveSelector(event, host, selector);
+    };
+    button.textContent = 'Save';
+    return button;
   }
 
   getEditButton(host, selector) {
@@ -111,8 +123,11 @@ class OverridesHelper extends window.Eventful {
   editSelector(event, host, selector) {
     event.preventDefault();
     const button = event.target;
-    button.disabled = true;
+    button.classList.add('hidden');
     const optionsCell = button.parentNode;
+    optionsCell.querySelector('.save-button').classList.remove('hidden');
+    optionsCell.querySelector('.cancel-button').classList.remove('hidden');
+    optionsCell.querySelector('.remove-button').classList.add('hidden');
     const row = optionsCell.parentNode;
     const selectorCell = row.querySelector('td.selector');
     selectorCell.style.width = `${selectorCell.clientWidth}px`;
@@ -143,26 +158,66 @@ class OverridesHelper extends window.Eventful {
     if (index < 0) {
       return;
     }
+    this.replaceSelector(row, host, index, newSelector);
+  }
+
+  saveSelector(event, host, oldSelector) {
+    const button = event.target;
+    button.disabled = true;
+    const row = button.closest('tr');
+    const index = this.options.overrides[host].indexOf(oldSelector);
+    if (index < 0) {
+      return;
+    }
+    const newSelector = row.querySelector('.selector-edit').value.trim();
+    this.replaceSelector(row, host, index, newSelector);
+  }
+
+  replaceSelector(row, host, index, newSelector) {
     this.options.overrides[host] = this.options.overrides[host].slice(0, index).
         concat([newSelector]).
         concat(this.options.overrides[host].slice(index + 1));
     HamburgerStorage.save(this.options).then(() => {
-      row.querySelector('.edit-button').disabled = false;
-      const cell = input.parentNode;
-      input.remove();
-      cell.textContent = newSelector;
+      row.querySelector('.edit-button.hidden').classList.remove('hidden');
+      row.querySelector('.selector-edit').remove();
+      row.querySelector('td.selector').textContent = newSelector;
+      const saveButton = row.querySelector('.save-button');
+      saveButton.disabled = false;
+      saveButton.classList.add('hidden');
     });
   }
 
   getRemoveButton(host, selector) {
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'button';
+    button.className = 'button remove-button';
     button.onclick = event => {
       this.removeSelector(event, host, selector);
     };
     button.textContent = 'Remove';
     return button;
+  }
+
+  getCancelButton(host, selector) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'button cancel-button hidden';
+    button.onclick = event => {
+      this.cancelEditSelector(event, host, selector);
+    };
+    button.textContent = 'Cancel';
+    return button;
+  }
+
+  cancelEditSelector(event, host, selector) {
+    const cancelButton = event.target;
+    const row = cancelButton.closest('tr');
+    cancelButton.classList.add('hidden');
+    row.querySelector('.selector-edit').remove();
+    row.querySelector('.save-button').classList.add('hidden');
+    row.querySelector('.remove-button.hidden').classList.remove('hidden');
+    row.querySelector('.edit-button.hidden').classList.remove('hidden');
+    row.querySelector('td.selector').textContent = selector;
   }
 }
 
